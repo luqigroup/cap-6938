@@ -1,0 +1,66 @@
+---
+title: Sampling Methods for Uncertainty Quantification
+subtitle: CAP 6938 (Spring 2026)
+description: |
+  Department of Computer Science<br>
+  University of Central Florida<br>
+  Orlando, FL, USA<br>
+
+navbar: false
+about:
+  id: heading
+  template: solana
+  image: files/TheTab_KGrgb_300ppi.png
+  image-width: 120px
+---
+
+:::{#heading}
+:::
+
+## Instructor and TA information
+
+
+**Instructor:** <span style="font-weight: normal;">[Ali Siahkoohi](https://alisiahkoohi.github.io/)</span>
+: - **Email:** [alisk@ucf.edu](mailto:alisk@ucf.edu)
+- **Office hours:** TBA
+
+**TAs:**
+: - TBA
+
+
+<!-- *See webcourses for the office hour location.* -->
+
+
+## Description
+
+This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include *mathematical and computational principles* of classical and contemporary sampling approaches with emphasis on **understanding the inner workings of deep generative models**, **variational inference**, and **simulation-based inference** methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.
+
+## Prerequisites
+
+Students should have background in probability theory, linear algebra, and programming. Familiarity with deep learning basics is recommended but not required.
+
+## Textbooks
+
+There is no required textbook for the class. A list of recommended papers will be provided during the course.
+
+## Grading
+- Programming assignments 60%
+- Paper presentation 15%
+- Final project 25%
+- There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation
+
+
+## Tentative schedule
+
+Course material will be posted on the website before each lecture. *The instructor reserves the right to alter this schedule as needed.*
+
+
+| Week | Module | Lecture Topics | Assignments/Notes |
+|------|--------|----------------|-------------------|
+| Week 1-2 | **Module 1: Foundations** | Uncertainty quantification in scientific computing<br>Review of probability, linear algebra, and deep learning background<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size | Assignment 1 |
+| Week 3-4 | **Module 2: Modern MCMC** | Gradient-based MCMC: Langevin dynamics and MALA<br>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies | Assignment 2<br>**Assignment 1 due** |
+| Week 5-7 | **Module 3: Variational Inference** | Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>Stein Variational Gradient Descent (SVGD) and particle-based methods<br>VI vs MCMC tradeoffs and diagnostics | Assignment 3<br>**Assignment 2 due** |
+| Week 8-9 | **Module 4: Deep Generative Models** | Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models<br>Maximum likelihood perspective on flow and diffusion models | Assignment 4<br>**Assignment 3 due** |
+| Week 10-11 | **Module 5: Simulation-Based Inference** | Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools | Assignment 5<br>**Assignment 4 due** |
+| Week 12-13 | **Instructor-Guided Paper Discussions** | Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches | Paper presentations<br>**Assignment 5 due** |
+| Week 14-15 | **Student-Led Presentations** | Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology | Final project presentations<br>**Final project report due** |
