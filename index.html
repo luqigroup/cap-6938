@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Department of Computer Science  University of Central Florida  Orlando, FL, USA ">
+
+<title>CAP 6938 - Sampling Methods for Uncertainty Quantification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./files/TheTab_KGrgb_square.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VCVVD4KWRF"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><br><br><br></h2>
+   
+  <ul>
+  <li><a href="#instructor-and-ta-information" id="toc-instructor-and-ta-information" class="nav-link active" data-scroll-target="#instructor-and-ta-information">Instructor and TA information</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#tentative-schedule" id="toc-tentative-schedule" class="nav-link" data-scroll-target="#tentative-schedule">Tentative schedule</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<div class="quarto-about-solana column-body">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Sampling Methods for Uncertainty Quantification</h1>
+<p class="subtitle lead">CAP 6938 (Spring 2026)</p>
+</div>
+<div>
+  <div class="description">
+    <p>Department of Computer Science<br> University of Central Florida<br> Orlando, FL, USA<br></p>
+  </div>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> 
+      <div class="about-contents"><div id="heading">
+</div></div>
+    </div>
+    <img src="files/TheTab_KGrgb_300ppi.png" class="about-image
+  rounded " style="width: 120px;">
+  </div>
+</div>
+
+<section id="instructor-and-ta-information" class="level2">
+<h2 data-anchor-id="instructor-and-ta-information">Instructor and TA information</h2>
+<dl>
+<dt><strong>Instructor:</strong> <span style="font-weight: normal;"><a href="https://alisiahkoohi.github.io/">Ali Siahkoohi</a></span></dt>
+<dd>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:alisk@ucf.edu">alisk@ucf.edu</a></li>
+<li><strong>Office hours:</strong> TBA</li>
+</ul>
+</dd>
+<dt><strong>TAs:</strong></dt>
+<dd>
+<ul>
+<li>TBA</li>
+</ul>
+</dd>
+</dl>
+<!-- *See webcourses for the office hour location.* -->
+</section>
+<section id="description" class="level2">
+<h2 data-anchor-id="description">Description</h2>
+<p>This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include <em>mathematical and computational principles</em> of classical and contemporary sampling approaches with emphasis on <strong>deep generative models</strong>, <strong>variational inference</strong>, and <strong>simulation-based inference</strong> methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.</p>
+</section>
+<section id="textbooks" class="level2">
+<h2 data-anchor-id="textbooks">Textbooks</h2>
+<p>There is no required textbook for the class. A list of recommended papers will be provided during the course.</p>
+</section>
+<section id="grading" class="level2">
+<h2 data-anchor-id="grading">Grading</h2>
+<ul>
+<li>Programming assignments 60%</li>
+<li>Paper presentation 15%</li>
+<li>Final project 25%.</li>
+<li>There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation.</li>
+</ul>
+</section>
+<section id="tentative-schedule" class="level2">
+<h2 data-anchor-id="tentative-schedule">Tentative schedule</h2>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 16%">
+<col style="width: 32%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Module</th>
+<th>Lecture Topics</th>
+<th>Assignments/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Week 1-2</td>
+<td><strong>Module 1: Foundations</strong></td>
+<td>Uncertainty quantification in scientific computing<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size</td>
+<td>Assignment 1</td>
+</tr>
+<tr class="even">
+<td>Week 3-4</td>
+<td><strong>Module 2: Modern MCMC</strong></td>
+<td>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies</td>
+<td>Assignment 2<br><strong>Assignment 1 due</strong></td>
+</tr>
+<tr class="odd">
+<td>Week 5-6</td>
+<td><strong>Module 3: Variational Inference</strong></td>
+<td>Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>VI vs MCMC tradeoffs and diagnostics</td>
+<td>Assignment 3<br><strong>Assignment 2 due</strong></td>
+</tr>
+<tr class="even">
+<td>Week 7-8</td>
+<td><strong>Module 4: Deep Generative Models</strong></td>
+<td>Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models</td>
+<td>Assignment 4<br><strong>Assignment 3 due</strong></td>
+</tr>
+<tr class="odd">
+<td>Week 9-10</td>
+<td><strong>Module 5: Simulation-Based Inference</strong></td>
+<td>Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools</td>
+<td>Assignment 5<br><strong>Assignment 4 due</strong></td>
+</tr>
+<tr class="even">
+<td>Week 11-12</td>
+<td><strong>Instructor-Guided Paper Discussions</strong></td>
+<td>Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches</td>
+<td>Paper presentations<br><strong>Assignment 5 due</strong></td>
+</tr>
+<tr class="odd">
+<td>Week 13-15</td>
+<td><strong>Student-Led Presentations</strong></td>
+<td>Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology</td>
+<td>Final project presentations<br><strong>Final project report due</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">[Made with Quarto]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/luqigroup/cap-6938">[Source]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://raw.githubusercontent.com/luqigroup/cap-6938/refs/heads/main/LICENSE">[License]</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
