@@ -77,6 +77,7 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
   <ul>
   <li><a href="#instructor-and-ta-information" id="toc-instructor-and-ta-information" class="nav-link active" data-scroll-target="#instructor-and-ta-information">Instructor and TA information</a></li>
   <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   <li><a href="#tentative-schedule" id="toc-tentative-schedule" class="nav-link" data-scroll-target="#tentative-schedule">Tentative schedule</a></li>
@@ -133,7 +134,11 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
 </section>
 <section id="description" class="level2">
 <h2 data-anchor-id="description">Description</h2>
-<p>This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include <em>mathematical and computational principles</em> of classical and contemporary sampling approaches with emphasis on <strong>deep generative models</strong>, <strong>variational inference</strong>, and <strong>simulation-based inference</strong> methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.</p>
+<p>This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include <em>mathematical and computational principles</em> of classical and contemporary sampling approaches with emphasis on <strong>understanding the inner workings of deep generative models</strong>, <strong>variational inference</strong>, and <strong>simulation-based inference</strong> methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.</p>
+</section>
+<section id="prerequisites" class="level2">
+<h2 data-anchor-id="prerequisites">Prerequisites</h2>
+<p>Students should have background in probability theory, linear algebra, and programming. Familiarity with deep learning basics is recommended but not required.</p>
 </section>
 <section id="textbooks" class="level2">
 <h2 data-anchor-id="textbooks">Textbooks</h2>
@@ -170,41 +175,41 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
 <tr class="odd">
 <td>Week 1-2</td>
 <td><strong>Module 1: Foundations</strong></td>
-<td>Uncertainty quantification in scientific computing<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size</td>
+<td>Uncertainty quantification in scientific computing<br>Review of probability, linear algebra, and deep learning background<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size</td>
 <td>Assignment 1</td>
 </tr>
 <tr class="even">
 <td>Week 3-4</td>
 <td><strong>Module 2: Modern MCMC</strong></td>
-<td>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies</td>
+<td>Gradient-based MCMC: Langevin dynamics and MALA<br>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies</td>
 <td>Assignment 2<br><strong>Assignment 1 due</strong></td>
 </tr>
 <tr class="odd">
-<td>Week 5-6</td>
+<td>Week 5-7</td>
 <td><strong>Module 3: Variational Inference</strong></td>
-<td>Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>VI vs MCMC tradeoffs and diagnostics</td>
+<td>Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>Stein Variational Gradient Descent (SVGD) and particle-based methods<br>VI vs MCMC tradeoffs and diagnostics</td>
 <td>Assignment 3<br><strong>Assignment 2 due</strong></td>
 </tr>
 <tr class="even">
-<td>Week 7-8</td>
+<td>Week 8-9</td>
 <td><strong>Module 4: Deep Generative Models</strong></td>
-<td>Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models</td>
+<td>Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models<br>Maximum likelihood perspective on flow and diffusion models</td>
 <td>Assignment 4<br><strong>Assignment 3 due</strong></td>
 </tr>
 <tr class="odd">
-<td>Week 9-10</td>
+<td>Week 10-11</td>
 <td><strong>Module 5: Simulation-Based Inference</strong></td>
 <td>Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools</td>
 <td>Assignment 5<br><strong>Assignment 4 due</strong></td>
 </tr>
 <tr class="even">
-<td>Week 11-12</td>
+<td>Week 12-13</td>
 <td><strong>Instructor-Guided Paper Discussions</strong></td>
 <td>Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches</td>
 <td>Paper presentations<br><strong>Assignment 5 due</strong></td>
 </tr>
 <tr class="odd">
-<td>Week 13-15</td>
+<td>Week 14-15</td>
 <td><strong>Student-Led Presentations</strong></td>
 <td>Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology</td>
 <td>Final project presentations<br><strong>Final project report due</strong></td>
