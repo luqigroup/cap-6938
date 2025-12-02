@@ -17,23 +17,24 @@ about:
 :::{#heading}
 :::
 
-## Instructor and TA information
+## Instructor information
 
 
 **Instructor:** <span style="font-weight: normal;">[Ali Siahkoohi](https://alisiahkoohi.github.io/)</span>
 : - **Email:** [alisk@ucf.edu](mailto:alisk@ucf.edu)
-- **Office hours:** TBA
+- **Office hours:** Wednesdays 11--12pm.
 
-**TAs:**
-: - TBA
-
-
-<!-- *See webcourses for the office hour location.* -->
-
+*See webcourses for the office hour location.*
 
 ## Description
 
 This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include *mathematical and computational principles* of classical and contemporary sampling approaches with emphasis on **understanding the inner workings of deep generative models**, **variational inference**, and **simulation-based inference** methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.
+
+
+## Why take this course?
+
+AI models have recently driven significant advances in various science and engineering domains, yet critical reliability concerns remain: models produce unreliable predictions, lack quantifiable safety guarantees, and their theoretical foundations remain opaque to many practitioners. Current approaches focused on scaling and post-hoc validation cannot systematically address these issues. In this course, you will learn modern uncertainty quantification techniques that not only can be applied widely in various science and engineering domains but also hold the key to designing more reliable AI models. You will go beyond treating generative models, which are key components of modern sampling and uncertainty quantification techniques, as black boxes, understanding and implementing the core mathematical principles that make them work. Through five hands-on programming assignments, you will build these algorithms from the ground up, gaining the deep foundational expertise needed to adapt, debug, and innovate in this rapidly evolving field.
+
 
 ## Prerequisites
 
@@ -44,23 +45,22 @@ Students should have background in probability theory, linear algebra, and progr
 There is no required textbook for the class. A list of recommended papers will be provided during the course.
 
 ## Grading
-- Programming assignments 60%
-- Paper presentation 15%
-- Final project 25%
+- Programming assignments 60% (5 assignments × 12% each)
+- Paper presentation 25%
+- Lecture scribing 15% (number of scribing assignments will depend on total class enrollment)
 - There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation
 
 
-## Tentative schedule
+## Course schedule
 
 Course material will be posted on the website before each lecture. *The instructor reserves the right to alter this schedule as needed.*
 
-
-| Week | Module | Lecture Topics | Assignments/Notes |
-|------|--------|----------------|-------------------|
-| Week 1-2 | **Module 1: Foundations** | Uncertainty quantification in scientific computing<br>Review of probability, linear algebra, and deep learning background<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size | Assignment 1 |
-| Week 3-4 | **Module 2: Modern MCMC** | Gradient-based MCMC: Langevin dynamics and MALA<br>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies | Assignment 2<br>**Assignment 1 due** |
-| Week 5-7 | **Module 3: Variational Inference** | Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>Stein Variational Gradient Descent (SVGD) and particle-based methods<br>VI vs MCMC tradeoffs and diagnostics | Assignment 3<br>**Assignment 2 due** |
-| Week 8-9 | **Module 4: Deep Generative Models** | Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models<br>Maximum likelihood perspective on flow and diffusion models | Assignment 4<br>**Assignment 3 due** |
-| Week 10-11 | **Module 5: Simulation-Based Inference** | Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools | Assignment 5<br>**Assignment 4 due** |
-| Week 12-13 | **Instructor-Guided Paper Discussions** | Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches | Paper presentations<br>**Assignment 5 due** |
-| Week 14-15 | **Student-Led Presentations** | Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology | Final project presentations<br>**Final project report due** |
+| Week | Module | Lecture Topics | Resources | Assignments/Notes |
+|:----|:-------|:---------------|:----------|:------------------|
+| Week 1-2 | **Module 1: Foundations** | [Uncertainty quantification in scientific computing](https://www.dropbox.com/scl/fi/4tdr64wsa93iqrx3yr5zf/lecture1.pdf?rlkey=9qresf1tbl1kcohilmztcjjnt&st=ij0r3y4c&raw=1) <br>[Review of probability](https://www.dropbox.com/scl/fi/gehrl6euckzq9i07kfcfk/lecture2.pdf?rlkey=5k2njda2qi1pwjul925d8y4sq&st=tc0vrkp7&raw=1) <br>[Monte Carlo integration and rejection sampling](https://www.dropbox.com/scl/fi/n7qfys3tkk4i1w3caxq2b/lecture3.pdf?rlkey=oxqzbrhrvjstyh302ffzwznhm&st=rj5xzft9&raw=1) | [What is UQ](https://www.afit.edu/STAT/statcoe_files/4_0328_LazarusUQBP_2_2.pdf)<br> [Rethinking Uncertainty](https://arxiv.org/abs/2412.20892)<br> [Information Adequacy Illusion](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0310216)<br> [You’re Confidently Wrong](https://www.science.org/content/article/you-re-wrong-here-s-why-you-keep-insisting-you-re-right) <br> [Confidence Misleads Supervised OOD Detection](https://openreview.net/forum?id=UXZJ3aL8vE) <br> [Mathematics for Machine Learning](https://mml-book.github.io/) | **MLK Day - No Class on Jan 19**<br> [Scribing instructions and template]{style="color: red;"} ([pdf](https://www.dropbox.com/scl/fi/0ykpogwyq09ewp95k8fp5/scribing-template.pdf?rlkey=4169johck84zl5ldmeov84o8w&st=x55yyqw2&raw=1), [zip](https://www.dropbox.com/scl/fi/7o5o8voc2rd67yw82dloy/scribing-template.zip?rlkey=2zcbslmnxbyf51l7h3utyrd1q&st=encdzfzx&raw=1))<br> [Notes on Probability](https://www.cs.ubc.ca/~schmidtm/Courses/Notes/probability.pdf)<br> [Notes on Linear Algebra](https://www.cs.ubc.ca/~schmidtm/Documents/2009_Notes_LinearAlgebra.pdf)<br> [Notes on Norms](https://www.cs.ubc.ca/~schmidtm/Courses/Notes/norms.pdf)<br> [Notes on Calculus](https://www.cs.ubc.ca/~schmidtm/Courses/Notes/calculus.pdf)<br> [Notes on Linear/Quadratic Gradients](https://www.cs.ubc.ca/~schmidtm/Courses/Notes/linearQuadraticGradients.pdf)<br> [Notes on Max and Argmax](https://www.cs.ubc.ca/~schmidtm/Courses/Notes/max.pdf)<br> [Rejection Sampling Notes](https://www.dropbox.com/scl/fi/znnoav6f4wnt09p8ncp3j/Rejection-Sampling-Notes.pdf?rlkey=h7hqvwa4s115c6jfqdy1bwn31&st=14h22nqh&raw=1)<br>  [[Assignment instructions]{style="color: red;"}](https://www.dropbox.com/scl/fi/6krrj338bys5rl86mwk91/submission_instructions.pdf?rlkey=mc0kggwgo42nppxrhju7nsbnw&st=50msig18&raw=1)<br> [[Assignment 1]{style="color: red;"}](https://www.dropbox.com/scl/fi/gwgyckhy2m8dmb2h7egol/a1.pdf?rlkey=yavc7aey1l7h6k9vapuluk1n9&st=2zq5m8oq&raw=1) [[a1.zip]{style="color: red;"}](https://www.dropbox.com/scl/fi/6wqa83t2ffyzl57ta5xdh/a1.zip?rlkey=a0lx63cey8z1rkafehgcfp5t0&st=3sddtv45&raw=1) |
+| Week 3-4 | **Module 2: MCMC** | [Importance sampling and introduction to MCMC: Metropolis-Hastings](https://www.dropbox.com/scl/fi/dzskxdiws5e1007nodvor/lecture4.pdf?rlkey=1x0fjzx1y07jy763frmnfafax&st=nwa42ov7&raw=1)<br> [Gibbs sampling and convergence diagnostics](https://www.dropbox.com/scl/fi/c0f1h2xwsxukbwnrbmpi4/lecture5.pdf?rlkey=0qh40cfjxcykj5kuuh6b7hlan&st=altfd3ik&raw=1)<br> [Gradient-based MCMC (Langevin dynamics and MALA)](https://www.dropbox.com/scl/fi/0w5y8bkkuux0kxpfk1wh4/lecture6.pdf?rlkey=pvc05p3ixyb1ft9jz6ng6dkzh&st=b8pqn5qa&raw=1) <br> [Hamiltonian Monte Carlo fundamentals](https://www.dropbox.com/scl/fi/xloyxptrgy1btxvl8j5gn/lecture7.pdf?rlkey=b65vh5spsahhcoie9e2wm4ort&raw=1) | [Handbook of Markov Chain Monte Carlo](https://www.taylorfrancis.com/books/edit/10.1201/b10905/handbook-markov-chain-monte-carlo-galin-jones-xiao-li-meng-andrew-gelman-steve-brooks)<br> [Understanding the Metropolis-Hastings Algorithm](https://www.tandfonline.com/doi/abs/10.1080/00031305.1995.10476177)<br> [Explaining the Gibbs Sampler](https://www.tandfonline.com/doi/abs/10.1080/00031305.1992.10475878)<br> [Markov Chain Monte Carlo Lecture Notes](http://www.stat.umn.edu/geyer/f05/8931/n1998.pdf)<br> [MCMC Slides](https://homepages.inf.ed.ac.uk/imurray2/teaching/09mlss/slides.pdf)<br> [On Thinning of Chains in MCMC](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00131.x)<br> [Practical Markov Chain Monte Carlo](https://projecteuclid.org/journals/statistical-science/volume-7/issue-4/Practical-Markov-Chain-Monte-Carlo/10.1214/ss/1177011137.full)<br> [Stochastic Gradient Langevin Dynamics](https://www.stats.ox.ac.uk/~teh/research/compstats/WelTeh2011a.pdf) <br> [Preconditioned SGLD](https://aaai.org/papers/10200-preconditioned-stochastic-gradient-langevin-dynamics-for-deep-neural-networks/) <br> [Hamiltonian Monte Carlo](https://andrewjholbrook.github.io/slides/HMC_Lecture.pdf)<br> [A Conceptual Introduction to Hamiltonian Monte Carlo](https://arxiv.org/abs/1701.02434) <br> [MCMC Interactive Gallery](https://chi-feng.github.io/mcmc-demo/app.html)  | **Assignment 1 due** <br> [[Assignment 2]{style="color: red;"}](https://www.dropbox.com/scl/fi/lpihnntr172j4ewoogghf/a2.pdf?rlkey=lnp3rtjy6i6lw58u6fy4ssm5g&st=h7h11wgo&raw=1) [[a2.zip]{style="color: red;"}](https://www.dropbox.com/scl/fi/nahpz1sv6r7yj9t48qnwd/a2.zip?rlkey=m39ltcbclfy9kh0jl4wh9y3rd&st=4bbldyik&raw=1) |
+| Week 5-7 | **Module 3: Variational Inference** | [Introduction to variational inference and KL divergence](https://www.dropbox.com/scl/fi/nitvzak4uib8ac2hchcic/lecture8.pdf?rlkey=tl4qu3evmynjcikfojpmrmkdj&raw=1)<br>[Reparameterization and the ELBO](https://www.dropbox.com/scl/fi/j0m2ch67zqq51jvin41y7/lecture9.pdf?rlkey=2xcp4w6p0eagg6wcuom1bo3cg&raw=1)<br>[Stochastic, non-amortized, and amortized variational inference](https://www.dropbox.com/scl/fi/yjl8e8z7n8gkrdfhixpb5/lecture10.pdf?rlkey=crnfpnin5pp5502ozt7l08jv2&raw=1)<br>[Particle-based variational inference and Stein's identity](https://www.dropbox.com/scl/fi/v2bi9ouscmz3vwzlnvh83/lecture11.pdf?rlkey=54zs4k25nte5nw355tvbbgyja&raw=1)<br>[Stein Variational Gradient Descent](https://www.dropbox.com/scl/fi/7aqhcl7xmbqo71syf481i/lecture12.pdf?rlkey=9vs1e6h9jivsx47u7r73rq2iv&raw=1)<br>[VI vs MCMC: tradeoffs, diagnostics, and hybrid methods](https://www.dropbox.com/scl/fi/sx681ywj1tpbf60kf4da5/lecture13.pdf?rlkey=596ss3yt04abghvq2l6m6zprq&raw=1) | [VI Review for Statisticians](https://arxiv.org/abs/1601.00670)<br> [Advances in VI](https://arxiv.org/abs/1711.05597)<br> [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114)<br> [Monte Carlo Gradient Estimation](https://arxiv.org/abs/1906.10652)<br> [Reliable Amortized VI](https://arxiv.org/abs/2207.11640)<br> [Stein Variational Gradient Descent](https://arxiv.org/abs/1608.04471)<br> [VI with Normalizing Flows](https://arxiv.org/abs/1505.05770)<br> [Yes, but Did It Work? Evaluating VI](https://arxiv.org/abs/1802.02538)<br> [Pareto Smoothed Importance Sampling](https://arxiv.org/abs/1507.02646)<br> [Importance Weighted Autoencoders](https://arxiv.org/abs/1509.00519)<br> [Practical Posterior Error Bounds from VI Objectives](https://arxiv.org/abs/1910.04102)<br> [Transport Map Accelerated MCMC](https://epubs.siam.org/doi/10.1137/17M1134640) | **Assignment 2 due**<br>[[Assignment 3]{style="color: red;"}](https://www.dropbox.com/scl/fi/oionjjchna515yw8dvu0o/a3.pdf?rlkey=8bonys2lis0juk2l99lrlkary&raw=1) [[a3.zip]{style="color: red;"}](https://www.dropbox.com/scl/fi/gwh40yo2fpoobjo0wipkc/a3.zip?rlkey=ktdt3bait2zz6id43rftix0r4&raw=1) |
+| Week 8-9 | **Module 4: Deep Generative Models** | Normalizing flows: theory and architectures<br>Variational autoencoders and amortized inference<br>Score matching and diffusion models<br>Flow matching and continuous normalizing flows |  | Assignment 4<br>**Assignment 3 due** |
+| Week 10-11 | **Module 5: Simulation-Based Inference** | Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools |  | Assignment 5<br>**Assignment 4 due** |
+| Week 12-13 | **Instructor-Guided Paper Discussions** | Instructor curates and leads discussions on 4-6 recent research papers |  | **Assignment 5 due** |
+| Week 14-15 | **Student Paper Presentations** | Student presentations on research papers (selected from curated list or instructor-approved)<br>Critical analysis and discussion of recent developments<br>Advanced topics and cutting-edge developments in sampling methodology |  | Paper presentations |

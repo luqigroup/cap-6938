@@ -75,12 +75,13 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
     <h2 id="toc-title"><br><br><br></h2>
    
   <ul>
-  <li><a href="#instructor-and-ta-information" id="toc-instructor-and-ta-information" class="nav-link active" data-scroll-target="#instructor-and-ta-information">Instructor and TA information</a></li>
+  <li><a href="#instructor-information" id="toc-instructor-information" class="nav-link active" data-scroll-target="#instructor-information">Instructor information</a></li>
   <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#why-take-this-course" id="toc-why-take-this-course" class="nav-link" data-scroll-target="#why-take-this-course">Why take this course?</a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#tentative-schedule" id="toc-tentative-schedule" class="nav-link" data-scroll-target="#tentative-schedule">Tentative schedule</a></li>
+  <li><a href="#course-schedule" id="toc-course-schedule" class="nav-link" data-scroll-target="#course-schedule">Course schedule</a></li>
   </ul>
 </nav>
     </div>
@@ -113,28 +114,26 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
   </div>
 </div>
 
-<section id="instructor-and-ta-information" class="level2">
-<h2 data-anchor-id="instructor-and-ta-information">Instructor and TA information</h2>
+<section id="instructor-information" class="level2">
+<h2 data-anchor-id="instructor-information">Instructor information</h2>
 <dl>
 <dt><strong>Instructor:</strong> <span style="font-weight: normal;"><a href="https://alisiahkoohi.github.io/">Ali Siahkoohi</a></span></dt>
 <dd>
 <ul>
 <li><strong>Email:</strong> <a href="mailto:alisk@ucf.edu">alisk@ucf.edu</a></li>
-<li><strong>Office hours:</strong> TBA</li>
-</ul>
-</dd>
-<dt><strong>TAs:</strong></dt>
-<dd>
-<ul>
-<li>TBA</li>
+<li><strong>Office hours:</strong> Wednesdays 11–12pm.</li>
 </ul>
 </dd>
 </dl>
-<!-- *See webcourses for the office hour location.* -->
+<p><em>See webcourses for the office hour location.</em></p>
 </section>
 <section id="description" class="level2">
 <h2 data-anchor-id="description">Description</h2>
 <p>This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include <em>mathematical and computational principles</em> of classical and contemporary sampling approaches with emphasis on <strong>understanding the inner workings of deep generative models</strong>, <strong>variational inference</strong>, and <strong>simulation-based inference</strong> methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.</p>
+</section>
+<section id="why-take-this-course" class="level2">
+<h2 data-anchor-id="why-take-this-course">Why take this course?</h2>
+<p>AI models have recently driven significant advances in various science and engineering domains, yet critical reliability concerns remain: models produce unreliable predictions, lack quantifiable safety guarantees, and their theoretical foundations remain opaque to many practitioners. Current approaches focused on scaling and post-hoc validation cannot systematically address these issues. In this course, you will learn modern uncertainty quantification techniques that not only can be applied widely in various science and engineering domains but also hold the key to designing more reliable AI models. You will go beyond treating generative models, which are key components of modern sampling and uncertainty quantification techniques, as black boxes, understanding and implementing the core mathematical principles that make them work. Through five hands-on programming assignments, you will build these algorithms from the ground up, gaining the deep foundational expertise needed to adapt, debug, and innovate in this rapidly evolving field.</p>
 </section>
 <section id="prerequisites" class="level2">
 <h2 data-anchor-id="prerequisites">Prerequisites</h2>
@@ -147,72 +146,74 @@ gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
 <section id="grading" class="level2">
 <h2 data-anchor-id="grading">Grading</h2>
 <ul>
-<li>Programming assignments 60%</li>
-<li>Paper presentation 15%</li>
-<li>Final project 25%</li>
+<li>Programming assignments 60% (5 assignments × 12% each)</li>
+<li>Paper presentation 25%</li>
+<li>Lecture scribing 15% (number of scribing assignments will depend on total class enrollment)</li>
 <li>There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation</li>
 </ul>
 </section>
-<section id="tentative-schedule" class="level2">
-<h2 data-anchor-id="tentative-schedule">Tentative schedule</h2>
+<section id="course-schedule" class="level2">
+<h2 data-anchor-id="course-schedule">Course schedule</h2>
 <p>Course material will be posted on the website before each lecture. <em>The instructor reserves the right to alter this schedule as needed.</em></p>
 <table class="table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 16%">
-<col style="width: 32%">
-<col style="width: 38%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Week</th>
-<th>Module</th>
-<th>Lecture Topics</th>
-<th>Assignments/Notes</th>
+<th style="text-align: left;">Week</th>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Lecture Topics</th>
+<th style="text-align: left;">Resources</th>
+<th style="text-align: left;">Assignments/Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Week 1-2</td>
-<td><strong>Module 1: Foundations</strong></td>
-<td>Uncertainty quantification in scientific computing<br>Review of probability, linear algebra, and deep learning background<br>Monte Carlo methods and importance sampling<br>Markov Chain Monte Carlo (Metropolis-Hastings, Gibbs sampling)<br>Convergence diagnostics and effective sample size</td>
-<td>Assignment 1</td>
+<td style="text-align: left;">Week 1-2</td>
+<td style="text-align: left;"><strong>Module 1: Foundations</strong></td>
+<td style="text-align: left;"><a href="https://www.dropbox.com/scl/fi/4tdr64wsa93iqrx3yr5zf/lecture1.pdf?rlkey=9qresf1tbl1kcohilmztcjjnt&amp;st=ij0r3y4c&amp;raw=1">Uncertainty quantification in scientific computing</a> <br><a href="https://www.dropbox.com/scl/fi/gehrl6euckzq9i07kfcfk/lecture2.pdf?rlkey=5k2njda2qi1pwjul925d8y4sq&amp;st=tc0vrkp7&amp;raw=1">Review of probability</a> <br><a href="https://www.dropbox.com/scl/fi/n7qfys3tkk4i1w3caxq2b/lecture3.pdf?rlkey=oxqzbrhrvjstyh302ffzwznhm&amp;st=rj5xzft9&amp;raw=1">Monte Carlo integration and rejection sampling</a></td>
+<td style="text-align: left;"><a href="https://www.afit.edu/STAT/statcoe_files/4_0328_LazarusUQBP_2_2.pdf">What is UQ</a><br> <a href="https://arxiv.org/abs/2412.20892">Rethinking Uncertainty</a><br> <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0310216">Information Adequacy Illusion</a><br> <a href="https://www.science.org/content/article/you-re-wrong-here-s-why-you-keep-insisting-you-re-right">You’re Confidently Wrong</a> <br> <a href="https://openreview.net/forum?id=UXZJ3aL8vE">Confidence Misleads Supervised OOD Detection</a> <br> <a href="https://mml-book.github.io/">Mathematics for Machine Learning</a></td>
+<td style="text-align: left;"><strong>MLK Day - No Class on Jan 19</strong><br> <span style="color: red;">Scribing instructions and template</span> (<a href="https://www.dropbox.com/scl/fi/0ykpogwyq09ewp95k8fp5/scribing-template.pdf?rlkey=4169johck84zl5ldmeov84o8w&amp;st=x55yyqw2&amp;raw=1">pdf</a>, <a href="https://www.dropbox.com/scl/fi/7o5o8voc2rd67yw82dloy/scribing-template.zip?rlkey=2zcbslmnxbyf51l7h3utyrd1q&amp;st=encdzfzx&amp;raw=1">zip</a>)<br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/probability.pdf">Notes on Probability</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Documents/2009_Notes_LinearAlgebra.pdf">Notes on Linear Algebra</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/norms.pdf">Notes on Norms</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/calculus.pdf">Notes on Calculus</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/linearQuadraticGradients.pdf">Notes on Linear/Quadratic Gradients</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/max.pdf">Notes on Max and Argmax</a><br> <a href="https://www.dropbox.com/scl/fi/znnoav6f4wnt09p8ncp3j/Rejection-Sampling-Notes.pdf?rlkey=h7hqvwa4s115c6jfqdy1bwn31&amp;st=14h22nqh&amp;raw=1">Rejection Sampling Notes</a><br> <a href="https://www.dropbox.com/scl/fi/6krrj338bys5rl86mwk91/submission_instructions.pdf?rlkey=mc0kggwgo42nppxrhju7nsbnw&amp;st=50msig18&amp;raw=1"><span style="color: red;">Assignment instructions</span></a><br> <a href="https://www.dropbox.com/scl/fi/gwgyckhy2m8dmb2h7egol/a1.pdf?rlkey=yavc7aey1l7h6k9vapuluk1n9&amp;st=2zq5m8oq&amp;raw=1"><span style="color: red;">Assignment 1</span></a> <a href="https://www.dropbox.com/scl/fi/6wqa83t2ffyzl57ta5xdh/a1.zip?rlkey=a0lx63cey8z1rkafehgcfp5t0&amp;st=3sddtv45&amp;raw=1"><span style="color: red;">a1.zip</span></a></td>
 </tr>
 <tr class="even">
-<td>Week 3-4</td>
-<td><strong>Module 2: Modern MCMC</strong></td>
-<td>Gradient-based MCMC: Langevin dynamics and MALA<br>Hamiltonian Monte Carlo fundamentals<br>No-U-Turn Sampler (NUTS)<br>Adaptive MCMC methods<br>Practical considerations and debugging strategies</td>
-<td>Assignment 2<br><strong>Assignment 1 due</strong></td>
+<td style="text-align: left;">Week 3-4</td>
+<td style="text-align: left;"><strong>Module 2: MCMC</strong></td>
+<td style="text-align: left;"><a href="https://www.dropbox.com/scl/fi/dzskxdiws5e1007nodvor/lecture4.pdf?rlkey=1x0fjzx1y07jy763frmnfafax&amp;st=nwa42ov7&amp;raw=1">Importance sampling and introduction to MCMC: Metropolis-Hastings</a><br> <a href="https://www.dropbox.com/scl/fi/c0f1h2xwsxukbwnrbmpi4/lecture5.pdf?rlkey=0qh40cfjxcykj5kuuh6b7hlan&amp;st=altfd3ik&amp;raw=1">Gibbs sampling and convergence diagnostics</a><br> <a href="https://www.dropbox.com/scl/fi/0w5y8bkkuux0kxpfk1wh4/lecture6.pdf?rlkey=pvc05p3ixyb1ft9jz6ng6dkzh&amp;st=b8pqn5qa&amp;raw=1">Gradient-based MCMC (Langevin dynamics and MALA)</a> <br> <a href="https://www.dropbox.com/scl/fi/xloyxptrgy1btxvl8j5gn/lecture7.pdf?rlkey=b65vh5spsahhcoie9e2wm4ort&amp;raw=1">Hamiltonian Monte Carlo fundamentals</a></td>
+<td style="text-align: left;"><a href="https://www.taylorfrancis.com/books/edit/10.1201/b10905/handbook-markov-chain-monte-carlo-galin-jones-xiao-li-meng-andrew-gelman-steve-brooks">Handbook of Markov Chain Monte Carlo</a><br> <a href="https://www.tandfonline.com/doi/abs/10.1080/00031305.1995.10476177">Understanding the Metropolis-Hastings Algorithm</a><br> <a href="https://www.tandfonline.com/doi/abs/10.1080/00031305.1992.10475878">Explaining the Gibbs Sampler</a><br> <a href="http://www.stat.umn.edu/geyer/f05/8931/n1998.pdf">Markov Chain Monte Carlo Lecture Notes</a><br> <a href="https://homepages.inf.ed.ac.uk/imurray2/teaching/09mlss/slides.pdf">MCMC Slides</a><br> <a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.00131.x">On Thinning of Chains in MCMC</a><br> <a href="https://projecteuclid.org/journals/statistical-science/volume-7/issue-4/Practical-Markov-Chain-Monte-Carlo/10.1214/ss/1177011137.full">Practical Markov Chain Monte Carlo</a><br> <a href="https://www.stats.ox.ac.uk/~teh/research/compstats/WelTeh2011a.pdf">Stochastic Gradient Langevin Dynamics</a> <br> <a href="https://aaai.org/papers/10200-preconditioned-stochastic-gradient-langevin-dynamics-for-deep-neural-networks/">Preconditioned SGLD</a> <br> <a href="https://andrewjholbrook.github.io/slides/HMC_Lecture.pdf">Hamiltonian Monte Carlo</a><br> <a href="https://arxiv.org/abs/1701.02434">A Conceptual Introduction to Hamiltonian Monte Carlo</a> <br> <a href="https://chi-feng.github.io/mcmc-demo/app.html">MCMC Interactive Gallery</a></td>
+<td style="text-align: left;"><strong>Assignment 1 due</strong> <br> <a href="https://www.dropbox.com/scl/fi/lpihnntr172j4ewoogghf/a2.pdf?rlkey=lnp3rtjy6i6lw58u6fy4ssm5g&amp;st=h7h11wgo&amp;raw=1"><span style="color: red;">Assignment 2</span></a> <a href="https://www.dropbox.com/scl/fi/nahpz1sv6r7yj9t48qnwd/a2.zip?rlkey=m39ltcbclfy9kh0jl4wh9y3rd&amp;st=4bbldyik&amp;raw=1"><span style="color: red;">a2.zip</span></a></td>
 </tr>
 <tr class="odd">
-<td>Week 5-7</td>
-<td><strong>Module 3: Variational Inference</strong></td>
-<td>Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>Stein Variational Gradient Descent (SVGD) and particle-based methods<br>VI vs MCMC tradeoffs and diagnostics</td>
-<td>Assignment 3<br><strong>Assignment 2 due</strong></td>
+<td style="text-align: left;">Week 5-7</td>
+<td style="text-align: left;"><strong>Module 3: Variational Inference</strong></td>
+<td style="text-align: left;"><a href="https://www.dropbox.com/scl/fi/nitvzak4uib8ac2hchcic/lecture8.pdf?rlkey=tl4qu3evmynjcikfojpmrmkdj&amp;raw=1">Introduction to variational inference and KL divergence</a><br><a href="https://www.dropbox.com/scl/fi/j0m2ch67zqq51jvin41y7/lecture9.pdf?rlkey=2xcp4w6p0eagg6wcuom1bo3cg&amp;raw=1">Reparameterization and the ELBO</a><br><a href="https://www.dropbox.com/scl/fi/yjl8e8z7n8gkrdfhixpb5/lecture10.pdf?rlkey=crnfpnin5pp5502ozt7l08jv2&amp;raw=1">Stochastic, non-amortized, and amortized variational inference</a><br><a href="https://www.dropbox.com/scl/fi/v2bi9ouscmz3vwzlnvh83/lecture11.pdf?rlkey=54zs4k25nte5nw355tvbbgyja&amp;raw=1">Particle-based variational inference and Stein’s identity</a><br><a href="https://www.dropbox.com/scl/fi/7aqhcl7xmbqo71syf481i/lecture12.pdf?rlkey=9vs1e6h9jivsx47u7r73rq2iv&amp;raw=1">Stein Variational Gradient Descent</a><br><a href="https://www.dropbox.com/scl/fi/sx681ywj1tpbf60kf4da5/lecture13.pdf?rlkey=596ss3yt04abghvq2l6m6zprq&amp;raw=1">VI vs MCMC: tradeoffs, diagnostics, and hybrid methods</a></td>
+<td style="text-align: left;"><a href="https://arxiv.org/abs/1601.00670">VI Review for Statisticians</a><br> <a href="https://arxiv.org/abs/1711.05597">Advances in VI</a><br> <a href="https://arxiv.org/abs/1312.6114">Auto-Encoding Variational Bayes</a><br> <a href="https://arxiv.org/abs/1906.10652">Monte Carlo Gradient Estimation</a><br> <a href="https://arxiv.org/abs/2207.11640">Reliable Amortized VI</a><br> <a href="https://arxiv.org/abs/1608.04471">Stein Variational Gradient Descent</a><br> <a href="https://arxiv.org/abs/1505.05770">VI with Normalizing Flows</a><br> <a href="https://arxiv.org/abs/1802.02538">Yes, but Did It Work? Evaluating VI</a><br> <a href="https://arxiv.org/abs/1507.02646">Pareto Smoothed Importance Sampling</a><br> <a href="https://arxiv.org/abs/1509.00519">Importance Weighted Autoencoders</a><br> <a href="https://arxiv.org/abs/1910.04102">Practical Posterior Error Bounds from VI Objectives</a><br> <a href="https://epubs.siam.org/doi/10.1137/17M1134640">Transport Map Accelerated MCMC</a></td>
+<td style="text-align: left;"><strong>Assignment 2 due</strong><br><a href="https://www.dropbox.com/scl/fi/oionjjchna515yw8dvu0o/a3.pdf?rlkey=8bonys2lis0juk2l99lrlkary&amp;raw=1"><span style="color: red;">Assignment 3</span></a> <a href="https://www.dropbox.com/scl/fi/gwh40yo2fpoobjo0wipkc/a3.zip?rlkey=ktdt3bait2zz6id43rftix0r4&amp;raw=1"><span style="color: red;">a3.zip</span></a></td>
 </tr>
 <tr class="even">
-<td>Week 8-9</td>
-<td><strong>Module 4: Deep Generative Models</strong></td>
-<td>Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models<br>Maximum likelihood perspective on flow and diffusion models</td>
-<td>Assignment 4<br><strong>Assignment 3 due</strong></td>
+<td style="text-align: left;">Week 8-9</td>
+<td style="text-align: left;"><strong>Module 4: Deep Generative Models</strong></td>
+<td style="text-align: left;">Normalizing flows: theory and architectures<br>Variational autoencoders and amortized inference<br>Score matching and diffusion models<br>Flow matching and continuous normalizing flows</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Assignment 4<br><strong>Assignment 3 due</strong></td>
 </tr>
 <tr class="odd">
-<td>Week 10-11</td>
-<td><strong>Module 5: Simulation-Based Inference</strong></td>
-<td>Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools</td>
-<td>Assignment 5<br><strong>Assignment 4 due</strong></td>
+<td style="text-align: left;">Week 10-11</td>
+<td style="text-align: left;"><strong>Module 5: Simulation-Based Inference</strong></td>
+<td style="text-align: left;">Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Assignment 5<br><strong>Assignment 4 due</strong></td>
 </tr>
 <tr class="even">
-<td>Week 12-13</td>
-<td><strong>Instructor-Guided Paper Discussions</strong></td>
-<td>Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches</td>
-<td>Paper presentations<br><strong>Assignment 5 due</strong></td>
+<td style="text-align: left;">Week 12-13</td>
+<td style="text-align: left;"><strong>Instructor-Guided Paper Discussions</strong></td>
+<td style="text-align: left;">Instructor curates and leads discussions on 4-6 recent research papers</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Assignment 5 due</strong></td>
 </tr>
 <tr class="odd">
-<td>Week 14-15</td>
-<td><strong>Student-Led Presentations</strong></td>
-<td>Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology</td>
-<td>Final project presentations<br><strong>Final project report due</strong></td>
+<td style="text-align: left;">Week 14-15</td>
+<td style="text-align: left;"><strong>Student Paper Presentations</strong></td>
+<td style="text-align: left;">Student presentations on research papers (selected from curated list or instructor-approved)<br>Critical analysis and discussion of recent developments<br>Advanced topics and cutting-edge developments in sampling methodology</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Paper presentations</td>
 </tr>
 </tbody>
 </table>
