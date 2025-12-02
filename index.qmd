@@ -30,10 +30,15 @@ about:
 
 <!-- *See webcourses for the office hour location.* -->
 
-
 ## Description
 
 This special topics course introduces modern computational sampling methods for uncertainty quantification in scientific computing and engineering applications. Topics include *mathematical and computational principles* of classical and contemporary sampling approaches with emphasis on **understanding the inner workings of deep generative models**, **variational inference**, and **simulation-based inference** methods. Students implement sampling algorithms and apply them to uncertainty quantification problems through hands-on programming assignments.
+
+
+## Why take this course?
+
+AI models have recently driven significant advances in various science and engineering domains, yet critical reliability concerns remain: models produce unreliable predictions, lack quantifiable safety guarantees, and their theoretical foundations remain opaque to many practitioners. Current approaches focused on scaling and post-hoc validation cannot systematically address these issues. In this course, you will learn modern uncertainty quantification techniques that not only can be applied widely in various science and engineering domains but also hold the key to designing more reliable AI models. You will go beyond treating generative models, which are key components of modern sampling and uncertainty quantification techniques, as black boxes, understanding and implementing the core mathematical principles that make them work. Through five hands-on programming assignments, you will build these algorithms from the ground up, gaining the deep foundational expertise needed to adapt, debug, and innovate in this rapidly evolving field.
+
 
 ## Prerequisites
 
@@ -44,9 +49,8 @@ Students should have background in probability theory, linear algebra, and progr
 There is no required textbook for the class. A list of recommended papers will be provided during the course.
 
 ## Grading
-- Programming assignments 60%
-- Paper presentation 15%
-- Final project 25%
+- Programming assignments 75% (5 assignments × 15% each)
+- Paper presentation 25%
 - There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation
 
 
@@ -62,5 +66,5 @@ Course material will be posted on the website before each lecture. *The instruct
 | Week 5-7 | **Module 3: Variational Inference** | Variational inference and the Evidence Lower Bound (ELBO)<br>Variational autoencoders for uncertainty representation<br>Amortized inference and reparameterization trick<br>Stein Variational Gradient Descent (SVGD) and particle-based methods<br>VI vs MCMC tradeoffs and diagnostics | Assignment 3<br>**Assignment 2 due** |
 | Week 8-9 | **Module 4: Deep Generative Models** | Normalizing flows for exact density modeling<br>Coupling layers and autoregressive flows<br>Invertible neural networks<br>Diffusion models and score-based generative models<br>Maximum likelihood perspective on flow and diffusion models | Assignment 4<br>**Assignment 3 due** |
 | Week 10-11 | **Module 5: Simulation-Based Inference** | Likelihood-free inference and Approximate Bayesian Computation (ABC)<br>Neural posterior estimation and neural likelihood estimation<br>Sequential methods and active learning<br>Practical implementation and diagnostic tools | Assignment 5<br>**Assignment 4 due** |
-| Week 12-13 | **Instructor-Guided Paper Discussions** | Instructor curates and leads discussions on 4-6 recent research papers<br>Critical analysis of methods and applications<br>Understanding trade-offs in modern sampling approaches | Paper presentations<br>**Assignment 5 due** |
-| Week 14-15 | **Student-Led Presentations** | Student presentations on research papers<br>Final project presentations<br>Advanced topics and cutting-edge developments in sampling methodology | Final project presentations<br>**Final project report due** |
+| Week 12-13 | **Instructor-Guided Paper Discussions** | Instructor curates and leads discussions on 4-6 recent research papers | **Assignment 5 due** |
+| Week 14-15 | **Student Paper Presentations** | Student presentations on research papers (selected from curated list or instructor-approved)<br>Critical analysis and discussion of recent developments<br>Advanced topics and cutting-edge developments in sampling methodology | Paper presentations |
