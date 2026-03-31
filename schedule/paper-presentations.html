@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Department of Computer Science  University of Central Florida  Orlando, FL, USA ">
+
+<title>CAP 6938 - Sampling Methods for Uncertainty Quantification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../files/TheTab_KGrgb_square.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VCVVD4KWRF"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><br><br><br></h2>
+   
+  <ul>
+  <li><a href="#paper-presentations" id="toc-paper-presentations" class="nav-link active" data-scroll-target="#paper-presentations">Paper Presentations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<div class="quarto-about-solana column-body">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Sampling Methods for Uncertainty Quantification</h1>
+<p class="subtitle lead">CAP 6938 (Spring 2026)</p>
+</div>
+<div>
+  <div class="description">
+    <p>Department of Computer Science<br> University of Central Florida<br> Orlando, FL, USA<br></p>
+  </div>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> 
+      <div class="about-contents"><div id="heading">
+</div></div>
+    </div>
+    <img src="../files/TheTab_KGrgb_300ppi.png" class="about-image
+  rounded " style="width: 120px;">
+  </div>
+</div>
+
+<section id="paper-presentations" class="level2">
+<h2 data-anchor-id="paper-presentations">Paper Presentations</h2>
+<p>Select one paper from the list below for your presentation. Papers are organized by course module. Each presentation should include: (1) the paper’s key contribution, (2) connections to course material (cite specific lectures), and (3) a critical analysis of strengths and limitations.</p>
+<hr>
+<section id="module-1-foundations" class="level4">
+<h4 data-anchor-id="module-1-foundations"><strong>Module 1: Foundations</strong></h4>
+<ul>
+<li>On the statistical formalism of uncertainty quantification [<a href="https://www.annualreviews.org/content/journals/10.1146/annurev-statistics-030718-105232">pdf</a>]</li>
+<li>Inverse problems: a Bayesian perspective [<a href="https://doi.org/10.1017/S0962492910000061">pdf</a>]</li>
+<li>Position: there is no free Bayesian uncertainty quantification [<a href="https://arxiv.org/abs/2506.03670">pdf</a>]</li>
+<li>Uncertainty quantification for machine learning: one size does not fit all [<a href="https://arxiv.org/abs/2512.15961">pdf</a>]</li>
+<li>A tutorial on conformal prediction for reliable machine learning [<a href="https://arxiv.org/abs/2107.07511">pdf</a>]</li>
+<li>Computational optimal transport [<a href="https://arxiv.org/abs/1803.00567">pdf</a>]</li>
+<li>Rethinking aleatoric and epistemic uncertainty [<a href="https://arxiv.org/abs/2412.20892">pdf</a>]</li>
+</ul>
+<hr>
+</section>
+<section id="module-2-mcmc" class="level4">
+<h4 data-anchor-id="module-2-mcmc"><strong>Module 2: MCMC</strong></h4>
+<ul>
+<li>Debiasing with couplings of Markov chains [<a href="https://arxiv.org/abs/1708.03625">pdf</a>]</li>
+<li>Interacting Langevin diffusions: gradient structure and ensemble Kalman sampler [<a href="https://arxiv.org/abs/1903.08866">pdf</a>]</li>
+<li>Continuously tempered Hamiltonian Monte Carlo [<a href="https://arxiv.org/abs/1704.03338">pdf</a>]</li>
+<li>Optimal tuning of the hybrid Monte Carlo algorithm [<a href="https://arxiv.org/abs/1001.4460">pdf</a>]</li>
+<li>MCMC methods for functions: modifying old algorithms to make them faster [<a href="https://doi.org/10.1214/13-STS421">pdf</a>]</li>
+<li>Sequential Monte Carlo samplers [<a href="https://doi.org/10.1111/j.1467-9868.2006.00553.x">pdf</a>]</li>
+<li>Sampling via gradient flows in the space of probability measures [<a href="https://arxiv.org/abs/2310.03597">pdf</a>]</li>
+<li>Posterior sampling based on gradient flows [<a href="https://arxiv.org/abs/2405.17075">pdf</a>]</li>
+</ul>
+<hr>
+</section>
+<section id="module-3-variational-inference" class="level4">
+<h4 data-anchor-id="module-3-variational-inference"><strong>Module 3: Variational Inference</strong></h4>
+<ul>
+<li>Variational inference for uncertainty quantification: an analysis of trade-offs [<a href="https://jmlr.org/papers/v26/24-0878.htm">pdf</a>]</li>
+<li>Do Bayesian neural networks actually behave like Bayesian models? [<a href="https://openreview.net/forum?id=x5RQnF7Vw9">pdf</a>]</li>
+<li>ELBO surgery: yet another way to carve up the variational evidence lower bound [<a href="https://arxiv.org/abs/1611.01891">pdf</a>]</li>
+<li>Black box variational inference [<a href="https://arxiv.org/abs/1401.0118">pdf</a>]</li>
+<li>Learning to draw samples with amortized Stein variational gradient descent [<a href="https://arxiv.org/abs/1707.06626">pdf</a>]</li>
+<li>Information geometry of variational Bayes [<a href="https://link.springer.com/article/10.1007/s41884-025-00174-3">pdf</a>]</li>
+<li>An approximation theory framework for measure-transport sampling algorithms [<a href="https://arxiv.org/abs/2302.13965">pdf</a>]</li>
+<li>Probabilistic inference and learning with Stein’s method [<a href="https://arxiv.org/abs/2603.07467">pdf</a>]</li>
+<li>An introduction to sampling via measure transport [<a href="https://arxiv.org/abs/1602.05023">pdf</a>]</li>
+<li>Adaptive symmetrization of the KL divergence [<a href="https://arxiv.org/abs/2511.11159">pdf</a>]</li>
+<li>Frequentist validity of epistemic uncertainty estimators [<a href="https://arxiv.org/abs/2510.22063">pdf</a>]</li>
+</ul>
+<hr>
+</section>
+<section id="module-4-deep-generative-models" class="level4">
+<h4 data-anchor-id="module-4-deep-generative-models"><strong>Module 4: Deep Generative Models</strong></h4>
+<ul>
+<li>Normalizing flows are capable generative models [<a href="https://openreview.net/forum?id=2uheUFcFsM">pdf</a>]</li>
+<li>Neural spline flows [<a href="https://arxiv.org/abs/1906.04032">pdf</a>]</li>
+<li>Dynamical regimes of diffusion models [<a href="https://www.nature.com/articles/s41467-024-54281-3">pdf</a>]</li>
+<li>Closed-form diffusion models [<a href="https://openreview.net/forum?id=JkMifr17wc">pdf</a>]</li>
+<li>Understanding diffusion objectives as the ELBO with simple data augmentation [<a href="https://arxiv.org/abs/2303.00848">pdf</a>]</li>
+<li>Convergence of denoising diffusion models under the manifold hypothesis [<a href="https://arxiv.org/abs/2208.05314">pdf</a>]</li>
+<li>Variational perspective on diffusion-based generative models and score matching [<a href="https://arxiv.org/abs/2210.04195">pdf</a>]</li>
+<li>Consistency models [<a href="https://arxiv.org/abs/2303.01469">pdf</a>]</li>
+<li>Elucidating the design space of diffusion-based generative models [<a href="https://arxiv.org/abs/2206.00364">pdf</a>]</li>
+<li>Stochastic interpolants: a unifying framework for flows and diffusions [<a href="https://arxiv.org/abs/2303.08797">pdf</a>]</li>
+<li>On the closed-form of flow matching: generalization does not arise from target stochasticity [<a href="https://openreview.net/forum?id=kVz9uvqUna">pdf</a>]</li>
+<li>Flow matching on general geometries [<a href="https://arxiv.org/abs/2302.03660">pdf</a>]</li>
+<li>Scaling rectified flow transformers for high-resolution image synthesis [<a href="https://arxiv.org/abs/2403.03206">pdf</a>]</li>
+<li>Input convex neural networks [<a href="https://arxiv.org/abs/1609.07152">pdf</a>]</li>
+<li>Convex potential flows: universal probability distributions with optimal transport and convex optimization [<a href="https://arxiv.org/abs/2012.05942">pdf</a>]</li>
+<li>Conditionally strongly log-concave generative models [<a href="https://arxiv.org/abs/2306.00181">pdf</a>]</li>
+<li>Iterated denoising energy matching for sampling from Boltzmann densities [<a href="https://arxiv.org/abs/2402.06121">pdf</a>]</li>
+<li>Energy-based transformers are scalable learners and thinkers [<a href="https://arxiv.org/abs/2507.02092">pdf</a>]</li>
+</ul>
+<hr>
+</section>
+<section id="module-5-simulation-based-inference" class="level4">
+<h4 data-anchor-id="module-5-simulation-based-inference"><strong>Module 5: Simulation-Based Inference</strong></h4>
+<ul>
+<li>All-in-one simulation-based inference [<a href="https://arxiv.org/abs/2404.09636">pdf</a>]</li>
+<li>Robust amortized Bayesian inference with self-consistency losses on unlabeled data [<a href="https://arxiv.org/abs/2501.13483">pdf</a>]</li>
+<li>Contrastive neural ratio estimation [<a href="https://arxiv.org/abs/2210.06170">pdf</a>]</li>
+<li>Diffusion models in simulation-based inference: a tutorial review [<a href="https://arxiv.org/abs/2512.20685">pdf</a>]</li>
+<li>Fast and robust simulation-based inference with optimization Monte Carlo [<a href="https://arxiv.org/abs/2511.13394">pdf</a>]</li>
+<li>Unifying summary statistic selection for approximate Bayesian computation [<a href="https://link.springer.com/article/10.1007/s11222-025-10808-2">pdf</a>]</li>
+<li>Compositional score modeling for simulation-based inference [<a href="https://arxiv.org/abs/2209.14249">pdf</a>]</li>
+<li>Sensitivity-aware amortized Bayesian inference [<a href="https://openreview.net/forum?id=Kxtpa9rvM0">pdf</a>]</li>
+<li>Detecting model misspecification in Bayesian inverse problems via variational gradient descent [<a href="https://arxiv.org/abs/2512.01667">pdf</a>]</li>
+<li>Sampling through iterated approximation: gradient-free and multi-fidelity Bayesian inference via transport [<a href="https://arxiv.org/abs/2603.12448">pdf</a>]</li>
+<li>Step-DAD: semi-amortized policy-based Bayesian experimental design [<a href="https://openreview.net/forum?id=JRg8P2bX8P">pdf</a>]</li>
+<li>Bayesian optimal experimental design via contrastive diffusions [<a href="https://arxiv.org/abs/2410.09504">pdf</a>]</li>
+<li>Bayesian experimental design: a review [<a href="https://doi.org/10.1214/ss/1177009939">pdf</a>]</li>
+<li>Generative modelling meets Bayesian inference: a new paradigm for inverse problems [<a href="https://royalsocietypublishing.org/doi/10.1098/rsta.2024.0334">pdf</a>]</li>
+<li>Calibrated inference: statistical inference that accounts for both sampling uncertainty and distributional uncertainty [<a href="https://jmlr.org/papers/v26/23-0714.html">pdf</a>]</li>
+<li>Ensemble Kalman diffusion guidance: a derivative-free method for inverse problems [<a href="https://openreview.net/forum?id=XPEEsKneKs">pdf</a>]</li>
+<li>Energy-based models for inverse imaging problems [<a href="https://arxiv.org/abs/2507.12432">pdf</a>]</li>
+</ul>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">[Made with Quarto]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/luqigroup/cap-6938">[Source]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://raw.githubusercontent.com/luqigroup/cap-6938/refs/heads/main/LICENSE">[License]</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
