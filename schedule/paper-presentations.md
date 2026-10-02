@@ -10,7 +10,7 @@ navbar: false
 about:
   id: heading
   template: solana
-  image: ../files/TheTab_KGrgb_300ppi.png
+  image: ../files/UCF-LOGO-Stacked-BoldGold-600x400.png
   image-width: 120px
 ---
 
