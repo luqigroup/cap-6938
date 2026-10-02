@@ -5,7 +5,7 @@ website:
   title: "CAP 6938"
   google-analytics: "G-VCVVD4KWRF"
   search: false
-  favicon: files/TheTab_KGrgb_square.png
+  favicon: files/UCF-LOGO-Stacked-BoldGold-square.png
   # Without this, the page footer will not display. It is removed in index.qmd
   navbar:
     background: dark
