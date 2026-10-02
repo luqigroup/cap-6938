@@ -11,7 +11,7 @@ about:
   id: heading
   template: solana
   image: ../files/UCF-LOGO-Stacked-BoldGold-600x400.png
-  image-width: 120px
+  image-width: 150px
 ---
 
 :::{#heading}
