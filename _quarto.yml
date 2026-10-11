@@ -26,8 +26,8 @@ format:
       light: [simplex, custom.scss]
       dark: [cyborg, custom_dark.scss]
     fontsize: 1.0em
-    linestretch: 1.4
-    mainfont: "sans-serif"
+    linestretch: 1.5
+    mainfont: "Noticia Text"
     toc: true
     toc-title: "<br><br><br>"
     link-external-newwindow: false

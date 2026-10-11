@@ -1,7 +1,10 @@
 /*-- scss:defaults --*/
-// Base document colors
-$blue:    #0451A5 !default;
+// Base document colors: gray text (GrayText #434343) and orange links, as on alisiahkoohi.github.io
+$blue:    #FF9500 !default;
 $primary:       $blue !default;
+$body-color: #434343 !default;
+$headings-color: #434343 !default;
+$headings-font-weight: 700 !default;
 
 
 .quarto-about-solana .about-image {
@@ -9,3 +12,7 @@ $primary:       $blue !default;
     background-color: #000000;
   }
 
+
+/*-- scss:rules --*/
+h2 { border-bottom-color: #434343; }                               // section lines in the text gray
+.sidebar nav[role=doc-toc] > ul a { border-left-color: #c0c0c0; }  // contents rule (LightGray)

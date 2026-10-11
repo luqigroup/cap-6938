@@ -7,6 +7,10 @@ $body-bg: #242424 !default;
 
 
 /*-- scss:rules --*/
+// Section lines and contents rule, as in alisiahkoohi.github.io's dark theme
+h2 { border-bottom-color: #727475; }
+.sidebar nav[role=doc-toc] > ul a { border-left-color: #4a4a4a; }
+
 h1, h2, h3, h4, h5, h6 {
   color: $primary;
 }
