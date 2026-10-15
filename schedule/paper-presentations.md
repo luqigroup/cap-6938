@@ -1,6 +1,6 @@
 ---
 title: Sampling Methods for Uncertainty Quantification
-subtitle: "[CAP 6938 (Spring 2026)](../index.qmd)"
+subtitle: "[CAP 6938 (Spring 2027)](../index.qmd)"
 description: |
   Department of Computer Science<br>
   University of Central Florida<br>
