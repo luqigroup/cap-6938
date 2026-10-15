@@ -19,7 +19,6 @@ about:
 
 ## Instructor information
 
-**Lectures:** Mondays and Wednesdays 4:30--5:45pm, BA1 O115
 
 **Instructor:** <span style="font-weight: normal;">[Ali Siahkoohi](https://alisiahkoohi.github.io/)</span>
 : - **Email:** [alisk@ucf.edu](mailto:alisk@ucf.edu)
