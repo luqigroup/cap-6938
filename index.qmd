@@ -45,8 +45,8 @@ Students should have background in probability theory, linear algebra, and progr
 There is no required textbook for the class. A list of recommended papers will be provided during the course.
 
 ## Grading
-- Programming assignments 65% (5 assignments × 13% each)
-- Paper presentation 25%
+- Programming assignments 60% (5 assignments × 12% each)
+- Paper presentation 30%
 - Lecture recap 10% (a 5-minute recap of the previous lecture at the start of class, ending with two questions for the class; sign up on webcourses). A second recap earns 5% extra credit
 - There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation
 
